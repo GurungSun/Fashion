@@ -118,9 +118,9 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    max-width: 75%;  /* Increased width to stretch further across the card */
+    max-width: 75%; 
     padding: 1.5rem;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), transparent);  /* Lighter horizontal gradient */
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), transparent);
     color: white;
     text-align: left;
 }
@@ -130,6 +130,14 @@
     font-size: 1.5rem;
     text-transform: capitalize;
     font-family: 'Inter', sans-serif;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);  /* Slightly stronger text shadow */
-    line-height: 1.2;  /* Better line height for text */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+    line-height: 1.2; 
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none; 
 }
