@@ -1,0 +1,135 @@
+.home-page{
+    width: 100%;
+    height: auto;
+    /* Ensure page content isn't hidden behind the fixed bottom navbar */
+    padding-bottom: calc(5rem + 1rem + env(safe-area-inset-bottom));
+}
+
+.image{
+    width: 100%;
+    height: 35rem;
+    display: flex;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text{
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 0.25rem rgba(0,0,0,0.5);
+    position: relative;
+    top: -2.5rem;
+    padding-bottom: 20rem;
+}
+
+.space{
+    height: 1.5rem;
+    opacity: 0 ;
+}
+
+.title{
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.title h1{
+    font-size: 40.55px;
+    font-weight: normal;
+    letter-spacing: 0.5rem;
+}
+
+.desc{
+    margin-top: 1.5rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 17.78px;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+}
+
+.navBar{
+    background-color: #FCFFFF;
+    z-index: 10;
+    min-height: 3rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 0 0.25rem rgba(0,0,0,0.5);
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
+}
+
+.button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3rem;
+    min-height: 2.5rem;
+    padding: 0.15rem 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background: transparent;
+}
+
+.button span{
+    font-size: 2.5rem;
+}
+
+.CardPage {
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cImg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.CardPage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cDesc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 75%;  /* Increased width to stretch further across the card */
+    padding: 1.5rem;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), transparent);  /* Lighter horizontal gradient */
+    color: white;
+    text-align: left;
+}
+
+.CardPage h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-family: 'Inter', sans-serif;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);  /* Slightly stronger text shadow */
+    line-height: 1.2;  /* Better line height for text */
+}
