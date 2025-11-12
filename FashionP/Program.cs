@@ -1,4 +1,6 @@
 using FashionP.Components;
+using FashionP.Data;
+using FashionP.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
+
+builder.Services.AddSingleton<ForumData>();
+builder.Services.AddTransient<FService>();
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -22,6 +28,7 @@ else
 }
 
 app.UseHttpsRedirection();
+app.MapControllers();
 
 app.UseStaticFiles();
 app.UseAntiforgery();
