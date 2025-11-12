@@ -1,7 +1,19 @@
 @page "/forum"
+@using FashionP.Services
 @using Microsoft.AspNetCore.Components.Web
+@using FashionP.Models
+@inject  FService FService
 
 <PageTitle>Forum</PageTitle>
+
+@code {
+    private List<FashionP.Models.Forum> forums;
+
+    protected override void OnInitialized()
+    {
+        forums = FService.GetForums();
+    }
+}
 
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +25,15 @@
 <h1>Forum Page</h1>
 
 <div>
+    @foreach (var forum in forums)
+    {
+        <div class ="forum-post">
+            <div class ="top">
+            <h2>@forum.Title</h2>
+            <h2>@forum.Date</h2>
+            </div>
+        </div>
+    }
     <div class="navBar">
         <a href="/">
             <div class="button">
