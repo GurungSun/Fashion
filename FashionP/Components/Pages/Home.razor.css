@@ -1,8 +1,6 @@
 .home-page{
     width: 100%;
     height: auto;
-    /* Ensure page content isn't hidden behind the fixed bottom navbar */
-    padding-bottom: calc(5rem + 1rem + env(safe-area-inset-bottom));
 }
 
 .image{
@@ -80,8 +78,8 @@
     min-width: 3rem;
     min-height: 2.5rem;
     padding: 0.15rem 0.5rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     cursor: pointer;
     border-radius: 0.5rem;
     background: transparent;
