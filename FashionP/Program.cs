@@ -12,6 +12,8 @@ builder.Services.AddRazorComponents()
 builder.Services.AddSingleton<ForumData>();
 builder.Services.AddTransient<FService>();
 builder.Services.AddControllers();
+builder.Services.AddSingleton<CardData>();
+builder.Services.AddTransient<CardService>();
 
 var app = builder.Build();
 

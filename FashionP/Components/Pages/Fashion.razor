@@ -2,8 +2,16 @@
 
 <PageTitle>Fashion</PageTitle>
 
+@inject FashionP.Services.CardService CardService
+
 @code {
-    
+
+    private List<FashionP.Models.Card> cards;
+
+    protected override void OnInitialized()
+    {
+        cards = CardService.GetCards();
+    }
 }
 
 <head>
@@ -14,6 +22,29 @@
 </head>
 
 <div>
+    <div class ="title">
+        <div class ="text">
+            <h1>Fashion</h1>
+        </div>
+        <div class ="image">
+            <img src="https://photos.smugmug.com/Kyoto/How-to-Dress-in-Japan/i-zcN5cG2/0/DQDJ4BFstN7bcTBg5h9fzk86JkdM6ttkqknFCRrVS/L/dress-shibuya-crossing-L.jpg" />
+        </div>
+    </div>
+
+    <div class="cards">
+        @foreach (var card in cards)
+        {
+            <div class="card">
+                <div class="Cimage">
+                    <img src="@card.ImageUrl" alt="@card.Title" />
+                </div>
+                <div class="desc">
+                    <h2>@card.Title</h2>
+                </div>
+            </div>
+        }
+    </div>
+
     <div class="navBar">
         <a href="/">
             <div class="button">
