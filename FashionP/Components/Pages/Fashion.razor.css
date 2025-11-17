@@ -41,3 +41,96 @@ a:active {
 .button span{
     font-size: 2.5rem;
 }
+
+.title{
+    width: 100%;
+    height: 12rem; 
+    margin-bottom: 1.5rem; 
+    position: relative;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text{
+    width: 100%;
+    position: absolute;
+    background-color: transparent !important;
+    z-index: 10;
+    text-align: center;
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0,0,0,0));
+
+}
+
+.title .text,
+.title .text * {
+    background-color: transparent !important;
+}
+
+.text h1{
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 8rem;
+    letter-spacing: 0.1rem;
+}
+
+.cards{
+    height: auto;
+    width: 90%;
+    margin-top: 1rem;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10rem;
+}
+
+.card{
+    height: 20rem;
+    width: 100%;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+
+}
+
+.Cimage{
+    height: 100%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+
+.Cimage img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.desc{
+    height: 10%;
+    width: 80%;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    display: flex;
+}
+
+.material-symbols-outlined {
+    font-size: 2rem;
+    margin-left: auto;
+}
+

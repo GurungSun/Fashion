@@ -1,9 +1,19 @@
 @page "/culture"
 
+@using FashionP.Services
+@using Microsoft.AspNetCore.Components.Web
+@using FashionP.Models
+@inject CulService CulService
+
 <PageTitle>Culture</PageTitle>
 
 @code {
-    
+    private List<FashionP.Models.Culture> cultures;
+
+    protected override void OnInitialized()
+    {
+        cultures = CulService.GetCultures();
+    }
 }
 
 <head>
@@ -14,6 +24,49 @@
 </head>
 
 <div>
+    <div class ="title">
+        <div class ="text">
+            <h1>Culture</h1>
+        </div>
+        <div class ="image">
+            <img src="https://voyapon.com/wp-content/uploads/2016/03/ART28-PHOTO1.jpg" />
+        </div>
+    </div>
+
+    <div class="TOC">
+        <div class="TOCtitle">
+            <h2>Table of Contents</h2>
+        </div>
+        <div class="TOClist">
+            <ol>
+                @foreach (var culture in cultures)
+                {
+                    <li>@culture.Name</li>
+                }
+            </ol>
+        </div>
+    </div>
+
+    <div class="Cultures">
+        @foreach (var culture in cultures)
+        {
+            <a href="@culture.ImageUrl">
+                <div class="cultureCard">
+                    <div class="Cimage">
+                        <img src="@culture.ImageUrl" alt="@culture.Name" />
+                    </div>
+                    <div class="desc">
+                        <div class="name">
+                            <h1>@culture.Name</h1>
+                        </div>
+                        <div class="description">
+                            <p>@culture.Description</p>
+                        </div>    
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
     <div class="navBar">
         <a href="/">
             <div class="button">

@@ -6,8 +6,9 @@ public class ForumData
 {
     public List<Forum> Forums { get; } = new()
     {
-        new Forum(Guid.NewGuid(), "Summer Fashion Trends", "Explore the latest trends in summer fashion for 2024!", DateTime.Now.ToString("MMMM dd, yyyy")),
-        new Forum(Guid.NewGuid(), "Sustainable Fashion", "Discuss the importance of sustainability in the fashion industry.", DateTime.Now.ToString("MMMM dd, yyyy")),
-        new Forum(Guid.NewGuid(), "Street Style Inspiration", "Share your favorite street style looks and inspirations.", DateTime.Now.ToString("MMMM dd, yyyy")),
+        new Forum(Guid.NewGuid(), "Summer Clothes", "Any recommendations for summer clothes? My wardrobe is filled with winter clothes", DateTime.Now.ToString("MM/dd/yyyy")),
+        new Forum(Guid.NewGuid(), "Statement", "I want to make a statement with my clothing at my next meeting with my friend", DateTime.Now.ToString("MM/dd/yyyy")),
+        new Forum(Guid.NewGuid(), "Aura", "Final Boss clothes? There's an upcoming cosplay event and I'd want to look like a final boss lol", DateTime.Now.ToString("MM/dd/yyyy")),
+        new Forum(Guid.NewGuid(), "Frieren", "How do I tie my scarf like Frieren? The show was so good that I want to copy her style", DateTime.Now.ToString("MM/dd/yyyy")),
     };
 }

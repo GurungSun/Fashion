@@ -2,18 +2,54 @@
 
 <PageTitle>Fashion</PageTitle>
 
+@inject FashionP.Services.CardService CardService
+
 @code {
-    
+
+    private List<FashionP.Models.Card> cards;
+
+    protected override void OnInitialized()
+    {
+        cards = CardService.GetCards();
+    }
 }
 
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back_ios,checkroom,diversity_1,forum,home" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back_ios,checkroom,diversity_1,forum,home,more_horiz" />
 </head>
 
 <div>
+    <div class ="title">
+        <div class ="text">
+            <h1>Fashion</h1>
+        </div>
+        <div class ="image">
+            <img src="https://photos.smugmug.com/Kyoto/How-to-Dress-in-Japan/i-zcN5cG2/0/DQDJ4BFstN7bcTBg5h9fzk86JkdM6ttkqknFCRrVS/L/dress-shibuya-crossing-L.jpg" />
+        </div>
+    </div>
+
+    <div class="cards">
+        @foreach (var card in cards)
+        {
+            <a href="@card.ImageUrl">
+                <div class="card">
+                    <div class="Cimage">
+                        <img src="@card.ImageUrl" alt="@card.Title" />
+                    </div>
+                    <div class="desc">
+                        <h2>@card.Title</h2>
+                        <span class="material-symbols-outlined">
+                            more_horiz
+                        </span>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+
     <div class="navBar">
         <a href="/">
             <div class="button">

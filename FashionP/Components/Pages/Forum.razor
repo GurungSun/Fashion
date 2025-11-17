@@ -22,15 +22,25 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back_ios,checkroom,diversity_1,forum,home" />
 </head>
 
-<h1>Forum Page</h1>
-
 <div>
+    <div class ="title">
+        <div class ="text">
+            <h1>Forums</h1>
+        </div>
+        <div class ="image">
+            <img src="https://img.japankuru.com/prg_img/img/img2018120616594233935500.jpg" />
+        </div>
+    </div>
+
     @foreach (var forum in forums)
     {
         <div class ="forum-post">
             <div class ="top">
-            <h2>@forum.Title</h2>
-            <h2>@forum.Date</h2>
+                <h2>@forum.Title</h2>
+                <h2>@forum.Date</h2>
+            </div>
+            <div class ="content">
+                <h2>@forum.Content</h2>
             </div>
         </div>
     }
