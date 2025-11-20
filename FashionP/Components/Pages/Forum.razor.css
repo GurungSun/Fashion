@@ -34,11 +34,18 @@
     margin-right: 0.5rem;
     cursor: pointer;
     border-radius: 0.5rem;
-    background: transparent;
+    background-color: #FCFFFF;
 }
 
 .button span{
     font-size: 2.5rem;
+    background-color: #FCFFFF;
+
+}
+
+.navBar a{
+    background-color: #FCFFFF;
+    text-decoration: none;
 }
 
 a,
@@ -111,14 +118,20 @@ a:active {
     margin-bottom: 1.3rem;
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
+    background-color: #FFFFFF;
+}
 
+.top h2{  
+    background-color: #FFFFFF;
 }
 
 .content {
     font-family: 'Inter', sans-serif;
     font-size: 0.7rem;
+    background-color: #FFFFFF;
 }
 
 .content h2{
     font-weight: light;
+    background-color: #FFFFFF;
 }
